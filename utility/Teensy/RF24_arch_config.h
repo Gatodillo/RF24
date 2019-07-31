@@ -13,7 +13,11 @@
   #include <string.h>
 
   #include <SPI.h>
+  #ifdef TEENSY_LCD
+  #define _SPI SPI1
+  #else
   #define _SPI SPI
+  #endif
 
   #define printf Serial.printf
   
